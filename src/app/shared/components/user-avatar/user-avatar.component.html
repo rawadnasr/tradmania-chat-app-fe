@@ -1,0 +1,9 @@
+<ion-avatar class="avatar">
+  <div *ngIf="isOnline">
+    <div class="indicator online-indicator"></div>
+  </div>
+  <div *ngIf="isLiked">
+    <ion-icon color="danger" name="heart" size="large" class="indicator like-indicator" />
+  </div>
+  <img src={{srcUrl}} />
+</ion-avatar>
