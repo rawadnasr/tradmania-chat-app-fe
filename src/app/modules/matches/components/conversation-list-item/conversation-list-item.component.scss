@@ -1,0 +1,18 @@
+.container {
+    margin-bottom: 24px;
+
+    .start-slot {
+        margin-inline-end: 12px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 5px;
+    }
+    
+    .end-slot {
+        padding-top: 10px;
+    }
+}

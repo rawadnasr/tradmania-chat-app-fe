@@ -1,0 +1,44 @@
+<ion-header class="header ion-no-border">
+  <ion-toolbar class="toolbar">
+    <ion-title class="header-title">
+     <span>Matches</span>  <span class="count-indicator matches-count-indicator">11</span>
+    </ion-title>
+    <div class="horizontal-scrolling">
+    <div *ngFor="let item of items" class="avatar-item">
+      <app-user-avatar [srcUrl]="url"/>
+      <div class="avatar-label">Yaraa</div>
+    </div>
+    </div>
+    <!-- <ion-content [scrollY]="false" [scrollX]="false">
+
+      <cdk-virtual-scroll-viewport oriebation="horizontal" class="ion-content-scroll-host" itemSize="listSize">
+        <div class="list-container">
+          <div *cdkVirtualFor="let item of items" >{{item}}</div>
+        </div>
+      </cdk-virtual-scroll-viewport>
+    </ion-content> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container" [fullscreen]="true" [scrollY]="false">
+
+  <cdk-virtual-scroll-viewport class="ion-content-scroll-host" itemSize="listSize">
+    <div class="list-container">
+      <ion-title class="content-title">
+        <span>Messages</span> <span class="count-indicator messages-count-indicator">2</span>
+      </ion-title>
+      <app-conversation-list-item *cdkVirtualFor="let item of items" />
+    </div>
+  </cdk-virtual-scroll-viewport>
+  <!-- <ion-button [routerLink]="['/chat']">Go to chat</ion-button> -->
+</ion-content>
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Matches</ion-title>
+    </ion-toolbar> -->
+
+  <!-- <app-conversation-list-item></app-conversation-list-item> -->
+
+  <!-- <app-horizontal-list></app-horizontal-list> -->
+

@@ -1,0 +1,64 @@
+.custom-border {
+  border-top: 1px solid blue;
+}
+
+.tab-bar {
+    position: relative;
+    padding-top: 30px;
+    border: 0;
+
+
+
+    .tab-button {
+      --color-selected: var(--ion-color-success);
+      --color-focused: var(--ion-color-success);
+
+      // position: relative;
+      // border-top: 1px solid black;
+      // // border-color:#000 transparent transparent transparent;
+      // border-radius: 70%/40px 40px 0 0;
+      // box-shadow: inset 0px 100px 10px -100px #CCC; 
+      // -webkit-box-shadow: inset 0px 100px 10px -100px #CCC; 
+      // -moz-box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+      // --padding-start: 0;
+      // --padding-end: 0;
+
+      .active-indicator {
+        width: 50px;
+        height: 18px;
+        position: absolute;
+        left: 50%;
+        top: 4px;
+        transform: translateX(-50%);
+        border-top: 1px solid blue;
+        border-left: 1px solid blue;
+        border-right: 1px solid blue;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        background: #fff;
+      }
+    }
+
+    .tab-button::before {
+      // content: "";
+      // position: absolute;
+      
+      // background-color: #fff;
+      // right: 0;
+      // height: 20px;
+      // width: 40px;
+      // border-bottom-right-radius: 25px;
+      // box-shadow: 0 -10 0 0 red;
+    }
+
+    // .curve-border {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   height: 10px; // Adjust the height of the curve
+    //   background-color: #ffcc00; // Set your desired border color
+    //   border-top-left-radius: 20px; // Adjust the radius to control the curve
+    //   border-top-right-radius: 20px; // Adjust the radius to control the curve
+    // }
+}

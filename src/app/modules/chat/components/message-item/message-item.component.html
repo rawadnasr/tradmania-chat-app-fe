@@ -1,0 +1,17 @@
+<ion-row class="" [ngClass]="{'rtl': mode === 'send', 'ltr': mode === 'recieve'}">
+  <ion-col size="9">
+    <div *ngIf="type === 'text'">
+      <app-text-item [mode]="mode" />
+    </div>
+    <div *ngIf="type === 'audio'">
+      <app-audio-item [mode]="mode"/>
+    </div>
+    <div *ngIf="type === 'image'">
+      <app-image-item [mode]="mode"/>
+    </div>
+
+  </ion-col>
+  <ion-col size="auto" class="time-col">
+    <ion-note>12:00</ion-note>
+  </ion-col>
+</ion-row>

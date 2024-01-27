@@ -1,0 +1,10 @@
+<ion-item lines="none" class="container">
+  <div class="start-slot" slot="start" >
+    <app-user-avatar [srcUrl]="imageUrl" />
+  </div>
+  <div class="content">
+    <ion-label>{{name}}</ion-label>
+    <ion-note>{{message}}</ion-note>
+  </div>
+  <ion-note class="end-slot" slot="end">{{time}}</ion-note>
+</ion-item>

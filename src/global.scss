@@ -24,3 +24,20 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.message-container {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.send-container {
+    border-radius: 40px 0px 40px 40px;
+    background-color: var(--ion-color-secondary);
+}
+
+.recieve-container {
+    border-radius: 0 40px 40px 40px;
+    background-color: var(--ion-color-primary);
+}
