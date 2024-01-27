@@ -1,0 +1,15 @@
+.message-input {
+    border-top: 1px solid var(--ion-color-secondary);
+    border-radius: 40px 40px 0 0;
+    --padding-end: 20px;
+    --padding-start: 30px;
+    box-shadow: 0px -3px 3px var(--ion-color-secondary);
+    -webkit-box-shadow: 0px -3px 3px var(--ion-color-secondary);
+    -moz-box-shadow: 0px -3px 3px var(--ion-color-secondary);
+    // background: var(--ion-color-light);
+
+    .submit-icon {
+        height: 50px;
+        width: 50px;
+    }
+}

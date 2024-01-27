@@ -1,0 +1,25 @@
+.avatar {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    .indicator {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .online-indicator {
+        background: var(--ion-color-success);
+        border-radius: 100%;
+        border: 3px solid var(--ion-color-light);
+    }
+
+    .like-indicator {
+        width: 30px;
+        height: 30px;
+    }
+
+}
