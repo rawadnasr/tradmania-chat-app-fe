@@ -1,0 +1,17 @@
+<app-primary-header />
+
+<ion-content class="container" [fullscreen]="true" [scrollY]="false">
+
+  <cdk-virtual-scroll-viewport class="ion-content-scroll-host" itemSize="listSize">
+    <div class="list-container">
+      <app-message-item *cdkVirtualFor="let item of items" [mode]="mode" [type]="type" />
+    </div>
+  </cdk-virtual-scroll-viewport>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="footer-toolbar">
+    <app-message-input />
+  </ion-toolbar>
+</ion-footer>
