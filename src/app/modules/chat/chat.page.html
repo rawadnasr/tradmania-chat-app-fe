@@ -1,10 +1,14 @@
-<app-primary-header />
+<app-primary-header [title]="recipient?.username ?? ''" [profileImageUrl]="recipient?.imageUrl ?? ''"/>
 
 <ion-content class="container" [fullscreen]="true" [scrollY]="false">
 
-  <cdk-virtual-scroll-viewport class="ion-content-scroll-host" itemSize="listSize">
+  <cdk-virtual-scroll-viewport class="ion-content-scroll-host" itemSize="messagesCount">
     <div class="list-container">
-      <app-message-item *cdkVirtualFor="let item of items" [mode]="mode" [type]="type" />
+      <app-message-item *cdkVirtualFor="let message of messages"
+        [mode]="message.user.id === user.id ? 'sender' : 'recipient'" 
+        [type]="message.type" 
+        [message]="message"
+        />
     </div>
   </cdk-virtual-scroll-viewport>
 
@@ -12,6 +16,6 @@
 
 <ion-footer class="ion-no-border">
   <ion-toolbar class="footer-toolbar">
-    <app-message-input />
+    <app-message-input (submitEvent)="sendMessage($event)" />
   </ion-toolbar>
 </ion-footer>

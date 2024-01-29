@@ -9,7 +9,6 @@ import { AudioItemComponent } from './components/audio-item/audio-item.component
 import { ImageItemComponent } from './components/image-item/image-item.component';
 import { MessageInputComponent } from './components/message-input/message-input.component';
 import { MessageItemComponent } from './components/message-item/message-item.component';
-import { MessageListComponent } from './components/message-list/message-list.component';
 import { TextItemComponent } from './components/text-item/text-item.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
@@ -29,7 +28,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     ImageItemComponent,
     AudioItemComponent,
     MessageInputComponent,
-    MessageListComponent
   ],
   exports: [
     TextItemComponent,
@@ -37,7 +35,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     ImageItemComponent,
     AudioItemComponent,
     MessageInputComponent,
-    MessageListComponent
   ]
 })
 export class ChatPageModule {}

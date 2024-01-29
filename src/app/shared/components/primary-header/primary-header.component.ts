@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-primary-header',
   templateUrl: './primary-header.component.html',
   styleUrls: ['./primary-header.component.scss'],
 })
-export class PrimaryHeaderComponent  implements OnInit {
+export class PrimaryHeaderComponent {
+
+  @Input() title: string = ''
+  @Input() profileImageUrl: string = ''
 
   constructor() { }
-
-  ngOnInit() {}
 
 }
