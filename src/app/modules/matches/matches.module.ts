@@ -6,7 +6,6 @@ import { MatchesPage } from './matches.page';
 import { MatchesPageRoutingModule } from './matches-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ConversationListItemComponent } from './components/conversation-list-item/conversation-list-item.component';
-import { ConversationListComponent } from './components/conversation-list/conversation-list.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
@@ -20,8 +19,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   ],
   declarations: [
     MatchesPage,
-    ConversationListItemComponent, 
-    ConversationListComponent
+    ConversationListItemComponent
   ]
 })
 export class MatchesPageModule {}

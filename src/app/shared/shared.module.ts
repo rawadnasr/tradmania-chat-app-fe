@@ -1,27 +1,22 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { HorizontalListComponent } from './components/horizontal-list/horizontal-list.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { UserAvatarComponent } from './components/user-avatar/user-avatar.component';
 import { PrimaryHeaderComponent } from './components/primary-header/primary-header.component';
 import { FormsModule } from '@angular/forms';
-import { VerticalScrollingListComponent } from './components/vertical-scrolling-list/vertical-scrolling-list.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    HorizontalListComponent, 
+  declarations: [ 
     UserAvatarComponent,
     PrimaryHeaderComponent,
-    VerticalScrollingListComponent
   ],
-  imports: [IonicModule.forRoot(), ScrollingModule, FormsModule],
+  imports: [IonicModule.forRoot(), ScrollingModule, FormsModule, CommonModule,],
   providers: [],
   bootstrap: [],
   exports: [
-    HorizontalListComponent,
     UserAvatarComponent,
-    PrimaryHeaderComponent,
-    VerticalScrollingListComponent
+    PrimaryHeaderComponent
   ]
 })
 export class SharedModule { }
