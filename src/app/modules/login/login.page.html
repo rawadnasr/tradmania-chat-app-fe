@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container" [fullscreen]="true">
+
+  <ion-input placeholder="Type your username here" class="message-input" [(ngModel)]="username">
+    <ion-button fill="clear" slot="end" aria-label="Show/hide" (click)="submitUsername()">
+      <ion-icon slot="icon-only" color="success" class="submit-icon" name="arrow-forward-circle"
+        aria-hidden="true"></ion-icon>
+    </ion-button>
+  </ion-input>
+
+</ion-content>

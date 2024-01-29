@@ -9,15 +9,12 @@ import { MessageModeType } from '../../models/type';
 export class TextItemComponent  implements OnInit {
 
   @Input() mode?: MessageModeType;
-  // @Output() evente = new EventEmitter<string>();
+  @Input() text?: string;
 
   constructor() { 
-    // this.text = ''
-    console.log('this.mode', this.mode)
   }
 
   ngOnInit() {
-    console.log('this.mode', this.mode)
   }
 
 }

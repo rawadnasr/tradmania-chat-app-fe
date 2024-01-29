@@ -8,6 +8,7 @@ import { MessageModeType } from '../../models/type';
 })
 export class AudioItemComponent  implements OnInit {
   @Input() mode?: MessageModeType;
+  @Input() audio?: any;
   constructor() { }
 
   ngOnInit() {}

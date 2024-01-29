@@ -41,14 +41,17 @@
                 flex: 0 0 auto;
                 text-align: center;
 
-                .avatar-label{
-                    margin-top: 8px
+                .avatar-label {
+                    margin-top: 8px;
+                    color: var(--ion-color-step-600, #666666);
+                    font-size: 0.875rem;
+                    text-transform: capitalize;
                 }
             }
 
             &::-webkit-scrollbar {
                 display: none;
-              }
+            }
         }
     }
 }

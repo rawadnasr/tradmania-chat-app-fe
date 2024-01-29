@@ -8,27 +8,27 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'matches',
-        loadChildren: () => import('../matches/matches.module').then(m => m.MatchesPageModule)
+        path: 'login',
+        loadChildren: () => import('../login/login.module').then(m => m.LoginPageModule)
       },
       {
         path: 'tab2',
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'matches',
+        loadChildren: () => import('../matches/matches.module').then(m => m.MatchesPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/matches',
+        redirectTo: '/tabs/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/matches',
+    redirectTo: '/tabs/login',
     pathMatch: 'full'
   }
 ];
@@ -36,4 +36,4 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

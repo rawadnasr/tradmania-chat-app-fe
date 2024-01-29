@@ -8,6 +8,7 @@ import { MessageModeType } from '../../models/type';
 })
 export class ImageItemComponent  implements OnInit {
   @Input() mode?: MessageModeType;
+  @Input() imageUrl?: string;
   constructor() { }
 
   ngOnInit() {}
