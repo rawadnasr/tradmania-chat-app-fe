@@ -1,0 +1,21 @@
+<app-primary-header [title]="recipient?.username ?? ''" [profileImageUrl]="recipient?.imageUrl ?? ''"/>
+
+<ion-content class="container" [fullscreen]="true" [scrollY]="false">
+
+  <cdk-virtual-scroll-viewport class="ion-content-scroll-host" itemSize="messagesCount">
+    <div class="list-container">
+      <app-message-item *cdkVirtualFor="let message of messages"
+        [mode]="message.user.id === user.id ? 'sender' : 'recipient'" 
+        [type]="message.type" 
+        [message]="message"
+        />
+    </div>
+  </cdk-virtual-scroll-viewport>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="footer-toolbar">
+    <app-message-input (submitEvent)="sendMessage($event)" />
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,29 @@
+<ion-header class="header ion-no-border">
+  <ion-toolbar class="toolbar">
+    <ion-title class="header-title">
+      <span>Matches</span>
+      <span class="count-indicator matches-count-indicator">{{matchesCount}}</span>
+    </ion-title>
+    <div class="horizontal-scrolling">
+      <div *ngFor="let user of users" class="avatar-item" (click)="navigateToChat(user?.id)" >
+        <app-user-avatar [srcUrl]="user.imageUrl" />
+        <div class="avatar-label">{{user.username}}</div>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container" [fullscreen]="true" [scrollY]="false">
+
+  <cdk-virtual-scroll-viewport class="ion-content-scroll-host" itemSize="conversationsCount">
+    <div class="list-container">
+      <ion-title class="content-title">
+        <span>Messages</span> <span class="count-indicator messages-count-indicator">2</span>
+      </ion-title>
+      <app-conversation-list-item 
+        *cdkVirtualFor="let conversation of conversations" 
+        [conversation]="conversation"
+        (click)="navigateToChat('', conversation.id)"/>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</ion-content>

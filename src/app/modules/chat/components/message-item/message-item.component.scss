@@ -1,0 +1,15 @@
+.row-container {
+    margin-bottom: 16px;
+}
+
+.ltr {
+    flex-direction: row;
+}
+
+.rtl {
+    flex-direction: row-reverse;
+}
+
+.time-col {
+    padding-top: 20px;
+}

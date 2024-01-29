@@ -1,0 +1,14 @@
+.container {
+    --background: var(--ion-color-secondary);
+    padding: 12px;
+
+    .title {
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .profile-avatar {
+        width: 40px;
+        height: 40px;
+    }
+}

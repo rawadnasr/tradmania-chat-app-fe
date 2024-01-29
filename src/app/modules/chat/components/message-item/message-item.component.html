@@ -1,0 +1,17 @@
+<ion-row [ngClass]="{'rtl': mode === 'sender', 'ltr': mode === 'recipient', 'row-container': true}">
+  <ion-col size="9">
+    <div *ngIf="type === 'text'">
+      <app-text-item [mode]="mode" [text]="message?.text ?? ''"/>
+    </div>
+    <div *ngIf="type === 'audio'">
+      <app-audio-item [mode]="mode"/>
+    </div>
+    <div *ngIf="type === 'image'">
+      <app-image-item [mode]="mode"/>
+    </div>
+
+  </ion-col>
+  <ion-col size="auto" class="time-col">
+    <ion-note>{{ message?.createdAt ? (message?.createdAt | date:'hh:mm') : '' }}</ion-note>
+  </ion-col>
+</ion-row>
