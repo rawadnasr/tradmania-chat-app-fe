@@ -7,7 +7,8 @@ export const environment = {
   socketIoConfig: { 
     url: 'localhost:3000', 
     options: {}
-  }
+  },
+  apiUrl: 'http://localhost:3000'
 };
 
 /*
